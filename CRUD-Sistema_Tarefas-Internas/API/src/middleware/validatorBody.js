@@ -4,7 +4,7 @@ const AppError = require("../error/AppError")
 const validatorBody = function validatorBody(schema){
     return (req,res,next) => {
         try{
-            req.boy = schema.parse(req.body)
+            req.body = schema.parse(req.body)
             next()
 
 
